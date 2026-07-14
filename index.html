@@ -3,39 +3,203 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Official information for RuTracker Visual Enhancer - Posters, Filters & Dark Mode.">
-  <title>RuTracker Visual Enhancer</title>
+  <meta name="theme-color" content="#5b3df5">
+  <meta name="description" content="RuTracker Visual Enhancer adds posters, fast filters, configurable columns, infinite scrolling, and polished Light and Dark themes to RuTracker.">
+  <meta property="og:title" content="RuTracker Visual Enhancer">
+  <meta property="og:description" content="A faster, clearer, more comfortable way to explore RuTracker results.">
+  <meta property="og:image" content="https://vitaliesdev.github.io/rutracker-visual-enhancer/screenshots/results-dark.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vitaliesdev.github.io/rutracker-visual-enhancer/">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>RuTracker Visual Enhancer | Posters, Filters &amp; Dark Mode</title>
+  <link rel="canonical" href="https://vitaliesdev.github.io/rutracker-visual-enhancer/">
+  <link rel="icon" href="assets/store-icon-128.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main>
-    <header class="hero">
-      <img src="assets/store-icon-128.png" width="96" height="96" alt="RuTracker Visual Enhancer icon">
-      <div>
-        <p class="eyebrow">Browser extension</p>
-        <h1>RuTracker Visual Enhancer</h1>
-        <p class="lead">Posters, fast filters, configurable columns, infinite scrolling, and polished Light/Dark themes for supported tracker result pages.</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <a class="brand" href="index.html" aria-label="RuTracker Visual Enhancer home">
+        <img src="assets/store-icon-128.png" width="38" height="38" alt="">
+        <span>RuTracker <strong>Visual Enhancer</strong></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#preview">Preview</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+      </nav>
+      <a class="nav-support" href="https://ko-fi.com/P5N4235C36" target="_blank" rel="noopener noreferrer">Support on Ko-fi</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <div class="status-pill"><span></span> Version 1.0.0 &middot; Chrome extension</div>
+        <h1>RuTracker, redesigned around <em>how you browse.</em></h1>
+        <p class="hero-lead">Posters, quick filters, configurable columns, infinite scrolling, and a polished Light or Dark interface. Everything useful stays close; everything noisy gets out of the way.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#preview">Explore the interface <span aria-hidden="true">&darr;</span></a>
+          <a class="button button-secondary" href="https://github.com/vitaliesdev/rutracker-visual-enhancer" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&nearr;</span></a>
+        </div>
+        <ul class="trust-list" aria-label="Product highlights">
+          <li>Local by design</li>
+          <li>No analytics</li>
+          <li>5 languages</li>
+        </ul>
       </div>
-    </header>
 
-    <section class="feature-grid" aria-label="Features">
-      <article><h2>Visual results</h2><p>Posters, summaries, availability indicators, author cards, and clearer dates make long result lists easier to scan.</p></article>
-      <article><h2>Fast navigation</h2><p>Filter loaded rows instantly, keep only seeded items, collapse advanced search, and optionally load the next page automatically.</p></article>
-      <article><h2>Your layout</h2><p>Choose visible columns, three poster sizes, Light or Dark themes, and one of five interface languages.</p></article>
-      <article><h2>Local by design</h2><p>No analytics, advertising, account, external API, or developer-operated data collection. Preferences and cache stay in the browser.</p></article>
+      <div class="hero-visual" aria-label="Dark theme results preview">
+        <div class="browser-frame">
+          <div class="browser-bar" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <div>rutracker.org/forum/tracker.php</div>
+          </div>
+          <img src="screenshots/results-dark.png" width="1280" height="800" alt="RuTracker search results enhanced with posters, filters, author cards and dark mode" fetchpriority="high">
+        </div>
+        <div class="floating-note note-top"><b>Visual results</b><span>Posters + metadata</span></div>
+        <div class="floating-note note-bottom"><b>Dark mode</b><span>Built for long sessions</span></div>
+      </div>
     </section>
 
-    <section class="notice">
-      <h2>Independent and unofficial</h2>
-      <p>This extension is not affiliated with RuTracker or any supported website. It does not host, index, proxy, or modify downloadable files. Users are responsible for following applicable laws and website terms.</p>
+    <section class="proof-strip" aria-label="Core qualities">
+      <div class="shell proof-grid">
+        <div><strong>Instant</strong><span>Local filtering</span></div>
+        <div><strong>Flexible</strong><span>S / M / L posters</span></div>
+        <div><strong>Focused</strong><span>Custom columns</span></div>
+        <div><strong>Private</strong><span>Data stays local</span></div>
+      </div>
     </section>
 
-    <nav class="links" aria-label="Project links">
-      <a href="privacy.html">Privacy policy</a>
-      <a href="support.html">Support</a>
-      <a href="https://ko-fi.com/P5N4235C36" rel="noopener noreferrer">Support development on Ko-fi</a>
-    </nav>
+    <section class="section shell" id="features">
+      <div class="section-heading">
+        <p class="eyebrow">Designed for faster scanning</p>
+        <h2>A visual layer that feels native.</h2>
+        <p>The extension enhances the existing tracker interface without replacing the underlying page or changing how RuTracker works.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card feature-wide">
+          <span class="feature-icon" aria-hidden="true">&#9638;</span>
+          <div>
+            <h3>Posters and compact summaries</h3>
+            <p>Recognize releases before reading every title. Posters and useful topic details load only when they approach the visible area.</p>
+          </div>
+          <div class="mini-poster-row" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">&#8981;</span>
+          <h3>Quick local filters</h3>
+          <p>Filter loaded rows instantly or keep only releases with seeds. No extra search request is needed.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">&#8595;</span>
+          <h3>Optional infinite scroll</h3>
+          <p>Load the next results page near the bottom, with visible page separators and navigation state preserved.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">&#9636;</span>
+          <h3>Your columns, your density</h3>
+          <p>Show only the information you need and choose between three poster sizes for every browsing style.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">&#9788;</span>
+          <h3>Full-site Light and Dark</h3>
+          <p>Apply a consistent theme across results, search, navigation, and forum pages without a bright loading flash.</p>
+        </article>
+        <article class="feature-card feature-wide language-card">
+          <span class="feature-icon" aria-hidden="true">Aa</span>
+          <div>
+            <h3>Speaks your language</h3>
+            <p>Uses the browser language by default, with a manual override in the extension panel.</p>
+          </div>
+          <div class="language-list" aria-label="Supported languages"><span>English</span><span>Українська</span><span>Русский</span><span>Română</span><span>Español</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section showcase" id="preview">
+      <div class="shell">
+        <div class="section-heading section-heading-light">
+          <p class="eyebrow">Real extension screenshots</p>
+          <h2>Comfortable in every theme.</h2>
+          <p>These are unedited captures of version 1.0.0 running on RuTracker. Click any image to inspect it at full size.</p>
+        </div>
+
+        <div class="screenshot-grid screenshot-grid-main">
+          <figure class="shot-card">
+            <a href="screenshots/results-light.png" aria-label="Open full-size Light results screenshot">
+              <img src="screenshots/results-light.png" width="1280" height="800" loading="lazy" alt="Enhanced RuTracker results in Light mode with the Columns menu open">
+            </a>
+            <figcaption><div><strong>Visual results</strong><span>Light theme</span></div><span class="shot-tag">Results</span></figcaption>
+          </figure>
+          <figure class="shot-card">
+            <a href="screenshots/results-dark.png" aria-label="Open full-size Dark results screenshot">
+              <img src="screenshots/results-dark.png" width="1280" height="800" loading="lazy" alt="Enhanced RuTracker results in Dark mode with posters and author cards">
+            </a>
+            <figcaption><div><strong>Visual results</strong><span>Dark theme</span></div><span class="shot-tag">Results</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="screenshot-grid screenshot-grid-secondary">
+          <figure class="shot-card shot-compact">
+            <a href="screenshots/home-light.png" aria-label="Open full-size Light home screenshot">
+              <img src="screenshots/home-light.png" width="1280" height="800" loading="lazy" alt="RuTracker home page restyled in Light mode">
+            </a>
+            <figcaption><div><strong>Site-wide styling</strong><span>Light theme</span></div><span class="shot-tag">Home</span></figcaption>
+          </figure>
+          <figure class="shot-card shot-compact">
+            <a href="screenshots/home-dark.png" aria-label="Open full-size Dark home screenshot">
+              <img src="screenshots/home-dark.png" width="1280" height="800" loading="lazy" alt="RuTracker home page restyled in Dark mode">
+            </a>
+            <figcaption><div><strong>Site-wide styling</strong><span>Dark theme</span></div><span class="shot-tag">Home</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell privacy-promo">
+      <div class="privacy-copy">
+        <p class="eyebrow">Local by design</p>
+        <h2>A visual extension, not a tracking layer.</h2>
+        <p>There are no ads, analytics, accounts, external APIs, or developer-operated telemetry. Preferences and a limited topic cache stay in your browser.</p>
+        <a class="text-link" href="privacy.html">Read the complete privacy policy <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      <ul class="privacy-checks">
+        <li><span aria-hidden="true">&#10003;</span><div><b>No analytics or advertising</b><small>Nothing is sent to the developer.</small></div></li>
+        <li><span aria-hidden="true">&#10003;</span><div><b>No remote executable code</b><small>All extension code ships in the package.</small></div></li>
+        <li><span aria-hidden="true">&#10003;</span><div><b>Bounded local cache</b><small>Up to 300 records, expiring after seven days.</small></div></li>
+      </ul>
+    </section>
+
+    <section class="section shell final-cta">
+      <img src="assets/store-icon-128.png" width="92" height="92" alt="RuTracker Visual Enhancer icon">
+      <div>
+        <p class="eyebrow">Independent and unofficial</p>
+        <h2>Made to make everyday browsing feel better.</h2>
+        <p>RuTracker Visual Enhancer is an independent project. If it saves you time, you can support its continued development on Ko-fi.</p>
+      </div>
+      <a class="button button-kofi" href="https://ko-fi.com/P5N4235C36" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">&#9749;</span> Support on Ko-fi</a>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <img src="assets/store-icon-128.png" width="34" height="34" alt="">
+        <div><strong>RuTracker Visual Enhancer</strong><span>Posters, filters &amp; dark mode.</span></div>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+        <a href="https://github.com/vitaliesdev/rutracker-visual-enhancer" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://ko-fi.com/P5N4235C36" target="_blank" rel="noopener noreferrer">Ko-fi</a>
+      </nav>
+      <p>&copy; 2026 Vitalies Dev. Not affiliated with RuTracker.</p>
+    </div>
+  </footer>
 </body>
 </html>
-

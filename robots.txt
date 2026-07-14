@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vitaliesdev.github.io/rutracker-visual-enhancer/sitemap.xml
