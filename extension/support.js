@@ -17,7 +17,7 @@
   const RULES = Object.freeze({ minDays: 7, minSearches: 30, snoozeDays: 60, maxDismissals: 3 });
 
   const FEEDBACK_URL = "https://vitaliesdev.github.io/rutracker-visual-enhancer/support.html";
-  const KOFI_URL = "https://ko-fi.com/P5N4235C36";
+  const KOFI_URL = "https://ko-fi.com/vitalies";
 
   function reviewUrl() {
     return `https://chromewebstore.google.com/detail/${chrome.runtime.id}/reviews`;

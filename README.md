@@ -1,91 +1,134 @@
-# RuTracker Visual Enhancer - Posters, Filters & Dark Mode
+<div align="center">
 
-A lightweight visual search enhancer for supported torrent tracker result pages.
+<img src="extension/icons/icon-128.png" alt="RuTracker Visual Enhancer" width="96">
 
-## Repository layout
+<h1>RuTracker Visual Enhancer</h1>
 
-| Folder | What it is |
-| --- | --- |
-| `extension/` | The extension source. This is the **only** editable copy and matches what is published on the Chrome Web Store (Manifest V3, v1.0.0). |
-| `store/` | Chrome Web Store publishing kit: listing copy, screenshots, promo assets, and reviewer notes. |
-| `docs/` | The GitHub Pages site (home, privacy, support), published from `main` → `/docs`. |
+<p><strong>Posters, instant filters, infinite scrolling and a polished Light or Dark theme for RuTracker search results.</strong></p>
 
-## Development & publishing
+[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Install-4285f4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/rutracker-visual-enhancer/nlbflmfklikjpiloaoobnonplpidmfgc)
+[![Website](https://img.shields.io/badge/Website-Visit-5b3df5?style=for-the-badge&logo=githubpages&logoColor=white)](https://vitaliesdev.github.io/rutracker-visual-enhancer/)
+[![Languages](https://img.shields.io/badge/Languages-5-3d444d?style=for-the-badge&logo=googletranslate&logoColor=white)](#features)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20me-ff5e5b?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/vitalies)
 
-**Easiest way (Windows):** double-click **`release.cmd`**. It installs dependencies the first time, lints, bumps the patch version, and packages the zip into `dist/` — no typing required. Then upload the zip from `dist/` in the Chrome Web Store dashboard and `git commit`.
+[Install](#install) · [Features](#features) · [Build it yourself](#build-it-yourself) · [Support](#support-the-project)
 
-Prefer the terminal, or need a `minor`/`major` bump? Use the scripts directly (one-time setup: `npm install`):
+<img src="docs/screenshots/results-dark.png" alt="RuTracker search results with posters, filters and the Dark theme" width="820">
 
-| Command | What it does |
-| --- | --- |
-| `npm run lint` | Lints `extension/` and `scripts/` with ESLint. |
-| `npm run bump -- patch\|minor\|major` | Bumps the version in `extension/manifest.json` and `package.json` (default: `patch`). Accepts an explicit `X.Y.Z` too. |
-| `npm run build` | Packages the **contents** of `extension/` into `dist/rutracker-visual-enhancer-v<version>.zip`, ready to upload. |
+</div>
 
-Typical upgrade flow: edit under `extension/` → `npm run lint` → `npm run bump -- patch` → `npm run build` → upload the zip from `dist/` in the Chrome Web Store dashboard → `git commit`.
+## About
 
-`dist/`, `node_modules/`, and any `*.zip`/`*.7z` are gitignored.
+A free, unofficial browser extension for Chrome and Brave that turns RuTracker's plain result table into something you can scan at a glance. Every result gets its poster and a short summary, a toolbar lets you filter what is already loaded, and the next pages can load on their own as you scroll.
+
+It works on top of the original site rather than replacing it: the links, the `.torrent` files and the Magnet links are RuTracker's own, and **Escape** or the floating toggle brings back the original table at any time.
+
+## Why use it
+
+- **Find releases faster.** Posters, summaries and tags (year, resolution, source, codec, language) tell you what a release is before you open it.
+- **Fewer clicks.** Download the `.torrent` or open the Magnet link straight from the results; see the author and the upload date at a glance.
+- **Filter instantly.** Narrow the loaded results by text or to seeded releases only, without sending a new search.
+- **Keep scrolling.** Optional infinite scrolling loads one page at a time, and going back from a topic returns you to the same spot.
+- **Easy on the eyes.** A full-site Dark theme for result, forum and topic pages, applied before the page paints, so there is no white flash.
+- **Light and private.** No framework, no analytics, no ads and no remote code. Topic details are fetched only from the site you are on, cached locally for 7 days, and nothing is sent to the developer.
+- **Reversible.** Simple view restores the site exactly as it was.
 
 ## Features
 
-- Manifest V3 support for Chrome and Brave.
-- Reversible visual mode with compact, medium, and large poster sizes.
-- Poster clicks open the original topic, plus a compact Download column for `.torrent` and magnet actions.
-- Persistent Columns menu for showing or hiding the main result-table columns.
-- Compact author cards reuse the topic avatar, rank, membership age, and message count; Added dates use a clearer two-level layout.
-- Posters and topic summaries loaded only near the viewport.
-- Maximum of four simultaneous topic requests.
-- Seven-day local cache with automatic expiry and size limits.
-- Local filters for title text and seeded torrents.
-- Optional one-page-at-a-time infinite scrolling, controlled from the result toolbar and remembered locally.
-- Loaded/visible/total counters, batch dividers, progress line, and manual retry on pagination errors.
-- Back-navigation restoration for loaded pages and the previous result position.
-- Poster memory protection that unloads images several screens away and restores them on approach.
-- Persistent Show/Hide control for the advanced tracker search form.
-- Accent-insensitive search.
-- Filters remain accurate across every page appended by infinite scrolling.
-- Technical tags and availability indicators.
-- Sticky desktop header and CSS-only poster zoom.
-- Persistent Light/Dark theme for complete supported websites, including forums and topic pages.
-- Consistent Electric Indigo and Soft Lilac design system in Light and Dark modes, using only local system fonts and lightweight CSS.
-- High-contrast colored result-batch dividers for infinite scrolling.
-- Early theme bootstrap at `document_start` to prevent the white-to-dark loading flash.
-- Visual removal of known site advertising containers and reclaimed layout space.
-- No analytics, advertisements, remote code, or external APIs.
-- HTTPS-only navigation with same-origin pagination and sanitized appended rows.
-- Automatic browser-language detection with optional language override in extension Options.
-- Complete interface localization in English, Ukrainian, Russian, Romanian, and Spanish.
-- Result-table headers follow the selected interface language and revert to the site's originals in Simple view.
-- Adaptive rounded-square Indigo/Lilac icon artwork optimized separately for small toolbar sizes.
+- Posters in three sizes, with a larger preview on hover, loaded only near the visible area
+- Short topic summaries directly in the results
+- `.torrent` and Magnet actions next to each result
+- Author cards (avatar, rank, membership, messages) and clearer upload dates
+- Text and "Seeded only" filters, with live visible / loaded / total counters
+- Columns menu to show or hide any column; the site's own column sorting keeps working
+- Optional infinite scrolling with page dividers, retry on errors and position restore
+- Collapsible advanced search form
+- Full-site Light and Dark themes, with readable contrast on every page
+- Interface in English, Ukrainian, Russian, Romanian and Spanish
+- Posters on other trackers built on the same forum engine, enabled per site from the extension icon
 
-## Local installation
+The complete list is in [FEATURES.md](FEATURES.md).
 
-1. Open `chrome://extensions` or `brave://extensions`.
-2. Enable **Developer mode**.
-3. Select **Load unpacked**.
-4. Choose this directory.
+## Install
 
-The extension runs only on the tracker domains declared in `manifest.json`. Press `Escape` or use the floating toggle to restore the original table.
+- **Chrome Web Store:** [install it here](https://chromewebstore.google.com/detail/rutracker-visual-enhancer/nlbflmfklikjpiloaoobnonplpidmfgc). It also works in Brave and other Chromium-based browsers.
+- **From source:** open `chrome://extensions` (or `brave://extensions`), turn on **Developer mode**, choose **Load unpacked** and select the `extension` folder.
 
-## Interface language
+On another tracker built on the same forum engine, click the extension icon and choose **Show posters on…**. The browser asks for access to that one site only, and the same button turns it off again. These sites get posters only, shown inside the title cell, so their layout and sorting stay untouched.
 
-The interface follows the browser UI language by default. Click the pinned extension icon to open the language selector, or use **Extension options** from the extension's **Details** page. Supported interface languages are English, Ukrainian, Russian, Romanian, and Spanish. Unsupported browser languages fall back to English. The compact **Reload** button appears only after the current panel changes the language. It refreshes an active HTTPS page on RuTracker or another supported tracker and disappears again after use. A normal browser reload applies the saved language as well. The popup follows the browser's own light or dark scheme; the extension's Light/Dark setting applies to RuTracker pages only.
+## Build it yourself
 
-## Supporting the project
+The Chrome Web Store package is the `extension` folder zipped, so you can build exactly the same file from this source.
 
-The popup footer always shows three links: **Rate** (the extension's Chrome Web Store reviews), **Feedback** (the support page) and **Ko-fi**. They open only after a click; opening the popup contacts no one and loads no remote assets.
+<details>
+<summary>Requirements and build steps</summary>
 
-A one-line note with the same three links appears occasionally, at the end of the RuTracker filter toolbar and at the top of the popup, with a small dot on the toolbar icon:
+### Requirements
+- [Node.js](https://nodejs.org/) 18 or newer (the packaging script has no dependencies; ESLint is installed by `npm install`)
+- Windows for `release.cmd`; the npm scripts work on any system
 
-- only after 7 days of use **and** 30 result pages opened in Visual view;
-- never on the day's first search;
-- dismissing it (✕) hides it for 60 days; after 3 dismissals, or once any of its links is used, it never returns.
+### Build
+On Windows, double-click **`release.cmd`**: it installs the dependencies the first time, lints the code, bumps the patch version and writes the zip to `dist\`.
 
-The counters behind these rules stay in `chrome.storage.local`. A minimal, event-driven service worker (`background.js`) only records the install date and sets or clears the icon dot, because content scripts cannot change the toolbar icon.
+Or from a terminal:
+```bash
+npm install
+npm run lint
+npm run bump -- patch    # or minor, major, or an explicit X.Y.Z
+npm run build            # dist/rutracker-visual-enhancer-v<version>.zip
+```
 
-## Supported sites
+`npm run build` zips the **contents** of `extension/` with forward-slash paths, as the Chrome Web Store expects. Everything it produces goes to `dist/`, which is not part of the repository.
 
-- `rutracker.org` and its subdomains
-- Other trackers built on the same forum engine, **on request**. On such a site, click the extension icon and choose **Show posters on this site**: Chrome asks for access to that site only, and the extension then registers itself there permanently (turn it off from the same popup). No other site is declared in the manifest. These sites run in a **posters-only** mode: the poster is shown inside the title cell (no extra columns, toolbar, theme or cell decorations), so the site's own layout and column sorting stay untouched.
+</details>
 
-Only HTTPS pages are supported. Pagination and topic requests remain on the origin currently being viewed, while poster images may load from HTTPS image hosts referenced by that topic.
+## Project layout
+
+| Path | What |
+|---|---|
+| `extension/` | The extension (Manifest V3): page scripts and styles, popup, service worker, icons and translations |
+| `docs/` | The website, published with GitHub Pages from `main` → `/docs` (home, privacy policy, help) |
+| `store/` | Chrome Web Store material: listing texts, screenshots, promotional images, privacy and review notes, and a validator for the kit |
+| `scripts/` | `build.mjs` packages the extension; `bump.mjs` updates the version |
+| `release.cmd` | One double-click to lint, bump the version and build |
+
+<details>
+<summary>Inside <code>extension/</code></summary>
+
+| File | What |
+|---|---|
+| `content.js`, `content.css` | Everything on the page: posters, toolbar, filters, infinite scrolling and the themes |
+| `theme-bootstrap.js` | Applies the saved theme at `document_start`, before the first paint |
+| `options.html`, `options.js`, `options.css` | The popup: interface language and per-site access |
+| `support.js` | Shared popup links and icons |
+| `background.js` | Small event-driven service worker for the toolbar icon badge |
+| `runtime-i18n.js`, `_locales/` | Interface texts, and the store name and description, in five languages |
+| `icons/` | Extension icons from 16 to 128 px |
+
+RuTracker gets the full interface. Other trackers the user enables run in a posters-only mode, injected only after the user grants access to that site.
+
+</details>
+
+## Privacy
+
+Preferences and a small cache of topic details (up to 300 entries, kept 7 days) stay in your browser's extension storage. Topic pages are requested only from the site you are on, using your existing session. See the full [privacy policy](https://vitaliesdev.github.io/rutracker-visual-enhancer/privacy.html).
+
+## Support the project
+
+This extension is free and made in my spare time. If it saved you time or you simply enjoy it, you can help me keep making tools like this.
+
+[![Support me on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/vitalies)
+
+## Credits
+
+- **RuTracker Visual Enhancer:** REPTIX · Vitalie
+- This is an independent, unofficial extension, not affiliated with or endorsed by RuTracker. Use it in line with the site's rules and the law where you live.
+- Chrome is a trademark of Google LLC. Brave is a trademark of Brave Software, Inc.
+
+<div align="center">
+
+[GitHub](https://github.com/vitaliesdev) · [Website](https://vitaliesdev.github.io/rutracker-visual-enhancer/) · [Ko-fi](https://ko-fi.com/vitalies)
+
+Made by REPTIX · Vitalie
+
+</div>
