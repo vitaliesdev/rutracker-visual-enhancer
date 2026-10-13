@@ -1,0 +1,138 @@
+/* Popup / options page. Follows the browser's light or dark scheme so it feels
+   like part of the browser; the extension's own Light/Dark applies to RuTracker only. */
+:root {
+  color-scheme:light dark;
+  --bg:#ffffff;
+  --text:#1f1f1f;
+  --muted:#5f6368;
+  --divider:#e3e3e6;
+  --field:#ffffff;
+  --field-border:#c4c4c8;
+  --field-border-hover:#8e8e93;
+  --accent:#5B3DF5;
+  --accent-hover:#4d30df;
+  --on-accent:#ffffff;
+  --link:#4a2fe0;
+  --hover:#f2f2f4;
+  --nudge-bg:#f3f0ff;
+  --nudge-text:#2d2470;
+  --tile-star:#FFF3D1;
+  --tile-chat:#DFF2FF;
+  --tile-coffee:#FFE5E3;
+  font:13px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+@media (prefers-color-scheme:dark) {
+  :root {
+    --bg:#202124;
+    --text:#e8eaed;
+    --muted:#9aa0a6;
+    --divider:#3c4043;
+    --field:#2d2e31;
+    --field-border:#5f6368;
+    --field-border-hover:#8a8f95;
+    --accent:#a093ea;
+    --accent-hover:#b2a7f0;
+    --on-accent:#1a1530;
+    --link:#b6a9ff;
+    --hover:#2d2e31;
+    --nudge-bg:#2c2840;
+    --nudge-text:#ddd6ff;
+    --tile-star:#57461A;
+    --tile-chat:#164A66;
+    --tile-coffee:#5E2D2A;
+  }
+}
+
+* { box-sizing:border-box; }
+[hidden] { display:none !important; }
+
+body { width:320px; min-width:320px; margin:0; }
+
+.app-header { display:flex; align-items:center; gap:9px; padding:12px 14px; border-bottom:1px solid var(--divider); }
+.app-header img { flex:none; border-radius:6px; }
+.app-name { flex:1; min-width:0; font-size:14px; font-weight:650; letter-spacing:-.01em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.app-version { color:var(--muted); font-size:11px; font-variant-numeric:tabular-nums; }
+
+.nudge { display:flex; align-items:flex-start; gap:9px; margin:10px 10px 0; padding:9px 8px 9px 10px; border-radius:10px; background:var(--nudge-bg); color:var(--nudge-text); }
+.nudge p { margin:0; font-size:12px; }
+.nudge-icon svg { display:block; width:16px; height:16px; margin-top:1px; }
+.nudge-body { flex:1; min-width:0; }
+.nudge-links { display:flex; flex-wrap:wrap; gap:4px 12px; margin-top:4px; }
+.nudge-links a { color:var(--link); font-size:12px; font-weight:600; text-decoration:none; }
+.nudge-links a:hover { text-decoration:underline; }
+
+.icon-button { display:inline-flex; align-items:center; justify-content:center; flex:none; width:22px; height:22px; padding:0; border:0; border-radius:6px; background:transparent; color:inherit; cursor:pointer; opacity:.75; }
+.icon-button:hover { opacity:1; }
+.icon-button svg { width:13px; height:13px; }
+
+main { padding:4px 0; }
+
+.row { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 14px; }
+.row + .row, .status + .row { border-top:1px solid var(--divider); }
+.row-sub { padding-top:0; border-top:0 !important; }
+.row-stack { flex-direction:column; align-items:stretch; gap:9px; }
+.row-text { min-width:0; }
+
+label, h2 { display:block; margin:0; font-size:12px; font-weight:600; }
+.hint { margin:2px 0 0; color:var(--muted); font-size:11px; line-height:1.35; }
+.hint:empty { display:none; }
+
+select {
+  max-width:160px;
+  height:30px;
+  padding:4px 8px;
+  border:1px solid var(--field-border);
+  border-radius:7px;
+  background:var(--field);
+  color:var(--text);
+  font:inherit;
+  font-size:12px;
+  cursor:pointer;
+}
+select:hover { border-color:var(--field-border-hover); }
+
+.button {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  min-height:28px;
+  padding:5px 12px;
+  border:0;
+  border-radius:7px;
+  font:inherit;
+  font-size:12px;
+  font-weight:600;
+  line-height:1.25;
+  white-space:nowrap;
+  cursor:pointer;
+}
+/* The site button names the host, which can be long. */
+.row-stack .button { white-space:normal; overflow-wrap:anywhere; text-align:center; }
+.button-primary { background:var(--accent); color:var(--on-accent); }
+.button-primary:hover { background:var(--accent-hover); }
+.button-quiet { background:var(--hover); color:var(--text); }
+.button-quiet:hover { background:var(--divider); }
+
+.status { margin:0; padding:0 14px 8px; color:var(--link); font-size:11px; font-weight:600; }
+.status:empty { display:none; }
+
+.app-footer { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:4px; padding:8px 8px 10px; border-top:1px solid var(--divider); }
+.footer-link { display:inline-flex; align-items:center; justify-content:center; gap:5px; min-width:0; padding:4px 6px 4px 4px; white-space:nowrap; border-radius:9px; color:var(--text); font-size:12px; font-weight:500; text-decoration:none; }
+.footer-link:hover { background:var(--hover); }
+
+.icon-tile { display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:7px; }
+.icon-tile svg { width:15px; height:15px; }
+.tile-star { background:var(--tile-star); }
+.tile-chat { background:var(--tile-chat); }
+.tile-coffee { background:var(--tile-coffee); }
+
+:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+
+@media (min-width:600px) {
+  /* Options page embedded in the extensions manager. */
+  body { margin:16px auto; border:1px solid var(--divider); border-radius:12px; overflow:hidden; }
+}

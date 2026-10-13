@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="280" viewBox="0 0 440 280">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#23183f"/>
+      <stop offset="0.58" stop-color="#4b2ee1"/>
+      <stop offset="1" stop-color="#765cff"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#e8deff" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#e8deff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#12092b" flood-opacity=".55"/>
+    </filter>
+  </defs>
+  <rect width="440" height="280" fill="url(#bg)"/>
+  <circle cx="382" cy="40" r="155" fill="url(#glow)"/>
+  <path d="M-20 235 C90 188 149 283 260 228 S420 190 470 218 V300 H-20Z" fill="#e8deff" opacity=".1"/>
+  <g filter="url(#shadow)">
+    <rect x="286" y="68" width="116" height="116" rx="28" fill="#f5f0ff" opacity=".98"/>
+    <image href="../../../rutracker-visual-enhancer/icons/icon-128.png" x="296" y="78" width="96" height="96"/>
+  </g>
+  <text x="34" y="75" fill="#e8deff" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="1.8">RUTRACKER</text>
+  <text x="34" y="116" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif" font-size="32" font-weight="800">Visual Enhancer</text>
+  <text x="34" y="151" fill="#eee8ff" font-family="Segoe UI,Arial,sans-serif" font-size="15" font-weight="600">Posters · Filters · Dark Mode</text>
+  <g transform="translate(34 190)" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">
+    <rect width="78" height="28" rx="14" fill="#e8deff"/><text x="39" y="18" text-anchor="middle" fill="#4326d1">Faster</text>
+    <rect x="88" width="78" height="28" rx="14" fill="#e8deff"/><text x="127" y="18" text-anchor="middle" fill="#4326d1">Clearer</text>
+    <rect x="176" width="72" height="28" rx="14" fill="#e8deff"/><text x="212" y="18" text-anchor="middle" fill="#4326d1">Yours</text>
+  </g>
+</svg>
+

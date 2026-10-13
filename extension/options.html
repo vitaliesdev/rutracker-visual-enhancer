@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RuTracker Visual Enhancer options</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <header class="app-header">
+    <img src="icons/icon-32.png" width="22" height="22" alt="">
+    <span class="app-name">RuTracker Visual Enhancer</span>
+    <span id="app-version" class="app-version"></span>
+  </header>
+
+  <section id="support-nudge" class="nudge" hidden>
+    <span class="nudge-icon" data-icon="heart"></span>
+    <div class="nudge-body">
+      <p id="nudge-text"></p>
+      <div class="nudge-links">
+        <a class="support-action" data-action="rate" target="_blank" rel="noopener noreferrer"><span id="nudge-rate"></span></a>
+        <a class="support-action" data-action="feedback" target="_blank" rel="noopener noreferrer"><span id="nudge-feedback"></span></a>
+        <a class="support-action" data-action="coffee" target="_blank" rel="noopener noreferrer"><span id="nudge-coffee"></span></a>
+      </div>
+    </div>
+    <button id="nudge-dismiss" class="icon-button" type="button"></button>
+  </section>
+
+  <main>
+    <div class="row">
+      <div class="row-text">
+        <label for="language-select" id="language-label">Language</label>
+        <p id="browser-language" class="hint"></p>
+      </div>
+      <select id="language-select"></select>
+    </div>
+    <div id="reload-row" class="row row-sub" hidden>
+      <p id="options-hint" class="hint"></p>
+      <button id="reload-page" class="button button-primary" type="button">
+        <span aria-hidden="true">↻</span>
+        <span id="reload-label">Reload</span>
+      </button>
+    </div>
+    <p id="save-status" class="status" role="status" aria-live="polite"></p>
+
+    <section id="site-section" class="row row-stack" aria-labelledby="site-heading" hidden>
+      <div class="row-text">
+        <h2 id="site-heading">This site</h2>
+        <p id="site-status" class="hint"></p>
+      </div>
+      <button id="site-toggle" class="button button-primary" type="button"></button>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <a class="support-action footer-link" data-action="rate" target="_blank" rel="noopener noreferrer"><span class="icon-tile tile-star" data-icon="star"></span><span id="footer-rate"></span></a>
+    <a class="support-action footer-link" data-action="feedback" target="_blank" rel="noopener noreferrer"><span class="icon-tile tile-chat" data-icon="chat"></span><span id="footer-feedback"></span></a>
+    <a class="support-action footer-link" data-action="coffee" target="_blank" rel="noopener noreferrer"><span class="icon-tile tile-coffee" data-icon="coffee"></span><span id="footer-kofi"></span></a>
+  </footer>
+
+  <script src="runtime-i18n.js"></script>
+  <script src="support.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

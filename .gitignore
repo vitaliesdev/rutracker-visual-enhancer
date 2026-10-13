@@ -1,0 +1,15 @@
+# Build output / packaged uploads (regenerate on demand)
+dist/
+*.zip
+*.7z
+
+# OS / editor cruft
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
+# Node (only if you ever add tooling)
+node_modules/

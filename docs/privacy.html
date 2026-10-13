@@ -51,13 +51,14 @@
         <li>Interface preferences such as theme, language, poster size, visible columns, Visual view state, collapsed search state, and infinite-scroll preference.</li>
         <li>A bounded cache of up to 300 topic records, automatically expiring after 7 days.</li>
         <li>Temporary navigation and scroll-restoration information for the current browser session.</li>
+        <li>The install date, a count of result pages opened in Visual view, and whether the occasional “support the project” note was dismissed or used. These only decide when that note may appear and never leave the browser.</li>
       </ul>
 
       <h2>Network requests</h2>
       <p>Topic details are requested directly from the same <span translate="no">RuTracker</span> origin the user is viewing, using HTTPS and the browser’s existing session. The extension may display external poster or avatar images embedded by those pages. These requests go directly to the relevant website or image host, not through the extension developer.</p>
 
       <h2>Supported site</h2>
-      <p>Version 1.0.0 is configured exclusively for RuTracker.org and its subdomains. The extension runs only on the sites declared in its manifest.</p>
+      <p>The extension runs on RuTracker.org and its subdomains. It can also show posters on another tracker built on the same forum engine, but only after you click the extension icon on that site and grant access to it; you can revoke that access at any time.</p>
 
       <h2>Sharing and sale of data</h2>
       <p>The developer does not receive, sell, rent, share, or transfer user data. No data is used for advertising, profiling, creditworthiness, or lending. Humans do not review user browsing data.</p>

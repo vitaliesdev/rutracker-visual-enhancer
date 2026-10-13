@@ -1,0 +1,17 @@
+{
+  "name": "rutracker-visual-enhancer",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Chrome/Brave extension that adds posters, filters, infinite scrolling and Light/Dark themes to RuTracker result pages.",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint extension scripts",
+    "build": "node scripts/build.mjs",
+    "bump": "node scripts/bump.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "eslint": "^9.13.0",
+    "globals": "^15.11.0"
+  }
+}
