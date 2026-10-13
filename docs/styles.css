@@ -157,7 +157,7 @@ a:focus-visible {
 .feature-card p { margin: 0; color: var(--ink-soft); font-size: 14px; }
 .feature-icon { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid #d8cdfb; border-radius: 8px; background: var(--primary-faint); color: var(--primary-strong); font-family: var(--font-data); font-size: 18px; font-weight: 800; }
 .feature-icon svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
-.feature-wide { grid-column: span 2; display: grid; grid-template-columns: auto 1fr; align-content: start; column-gap: 18px; overflow: hidden; background: linear-gradient(135deg, var(--surface), #f3efff); }
+.feature-wide { grid-column: span 2; display: grid; grid-template-columns: auto 1fr; align-content: start; column-gap: 18px; overflow: hidden; background-color: var(--surface); background-image: linear-gradient(135deg, transparent 35%, rgba(91, 61, 245, .07)); }
 .feature-wide h3 { margin-top: 3px; }
 .feature-points { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; margin: 30px 0 0 60px; padding: 0; list-style: none; }
 .feature-points li { padding: 8px 11px; border: 1px solid #d7ccf8; border-radius: 6px; background: rgba(255, 255, 255, .78); color: #554a67; font-family: var(--font-data); font-size: 10px; font-weight: 700; }
@@ -193,7 +193,7 @@ a:focus-visible {
 .privacy-checks b { font-size: 13px; }
 .privacy-checks small { margin-top: 2px; color: var(--ink-soft); font-size: 11px; }
 
-.final-cta { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 28px; margin-bottom: 112px; padding: 38px; border: 1px solid #cfc2fa; border-radius: var(--radius-lg); background: linear-gradient(120deg, #f0eaff, #ffffff 60%, #ede7ff); box-shadow: var(--shadow-sm); }
+.final-cta { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 28px; margin-bottom: 112px; padding: 38px; border: 1px solid #cfc2fa; border-radius: var(--radius-lg); background-color: var(--surface); background-image: linear-gradient(120deg, rgba(91, 61, 245, .08), transparent 55%, rgba(91, 61, 245, .06)); box-shadow: var(--shadow-sm); }
 .final-cta img { border-radius: 24px; box-shadow: 0 14px 35px rgba(77, 47, 206, .24); }
 .final-cta h2 { font-size: clamp(26px, 3vw, 38px); }
 .final-cta p { max-width: 680px; margin-bottom: 0; font-size: 14px; }

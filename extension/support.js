@@ -19,8 +19,12 @@
   const FEEDBACK_URL = "https://vitaliesdev.github.io/rutracker-visual-enhancer/support.html";
   const KOFI_URL = "https://ko-fi.com/vitalies";
 
+  // Fixed to the published listing: an unpacked or self-built copy has a different
+  // runtime id, which would point to a store page that does not exist.
+  const STORE_URL = "https://chromewebstore.google.com/detail/rutracker-visual-enhancer/nlbflmfklikjpiloaoobnonplpidmfgc";
+
   function reviewUrl() {
-    return `https://chromewebstore.google.com/detail/${chrome.runtime.id}/reviews`;
+    return `${STORE_URL}/reviews`;
   }
 
   function isDue(settings, now = Date.now()) {
