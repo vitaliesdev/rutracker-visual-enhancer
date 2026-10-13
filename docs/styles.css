@@ -1,5 +1,5 @@
 :root {
-  color-scheme: light;
+  color-scheme: light dark;
   font-family: "Segoe UI Variable Text", "Segoe UI", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: "Segoe UI Variable Text", "Segoe UI", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-display: "Aptos Display", "Segoe UI Variable Display", "Arial Narrow", "Segoe UI", sans-serif;
@@ -279,6 +279,42 @@ a:focus-visible {
   .site-footer > .footer-grid > p { grid-column: auto; margin-top: 0; }
   .document-main { width: min(100% - 28px, 860px); padding-top: 42px; }
   .document-hero { padding: 10px 0 28px; }
+}
+
+/* Dark theme: follows the visitor's system setting. The screenshot showcase is
+   already dark, so only the light surfaces and hard-coded light tints change. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #8f7aff;
+    --primary-strong: #ab9dff;
+    --primary-soft: #2c2445;
+    --primary-faint: #211b33;
+    --ink: #ece8f6;
+    --ink-soft: #b4acc5;
+    --page: #110e18;
+    --surface: #1a1624;
+    --surface-soft: #201b2c;
+    --line: #2e2740;
+    --shadow-sm: 0 6px 18px rgba(0, 0, 0, .35);
+    --shadow-lg: 0 24px 64px rgba(0, 0, 0, .5);
+  }
+  .site-header { border-bottom-color: rgba(46, 39, 64, .9); background: rgba(17, 14, 24, .82); }
+  .skip-link { color: var(--page); }
+  .status-pill { border-color: #3a3156; background: rgba(33, 27, 51, .9); color: #c2b8dc; }
+  .trust-list { color: #a59cb6; }
+  .button-primary { background: linear-gradient(135deg, #5b3df5, #755bff); }
+  .proof-strip { background: rgba(26, 22, 36, .72); }
+  .feature-icon { border-color: #3a3156; }
+  .feature-wide { background-image: linear-gradient(135deg, transparent 35%, rgba(143, 122, 255, .1)); }
+  .feature-points li, .language-list li { border-color: #3a3156; background: rgba(33, 27, 51, .8); color: #c9c0de; }
+  .text-link:hover, .text-link:active { color: #c4b9ff; }
+  .privacy-checks > li > span { background: #12301f; color: #4fd28d; }
+  .final-cta { border-color: #3a3156; background-image: linear-gradient(120deg, rgba(143, 122, 255, .12), transparent 55%, rgba(143, 122, 255, .08)); }
+  .button-kofi { background: #f1edff; color: #171220; }
+  .site-footer > .footer-grid > p { color: #8f87a0; }
+  .updated { color: #c2b8dc !important; }
+  .document-card p, .document-card li { color: #c3bcd2; }
+  .document-callout { border-color: #3a3156; }
 }
 
 @media (prefers-reduced-motion: reduce) {

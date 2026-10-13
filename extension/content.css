@@ -53,7 +53,7 @@ html[data-tl-theme="dark"] {
 #tl-density[hidden] { display:none; }
 #tl-theme { display:flex; gap:3px; padding-left:6px; border-left:1px solid var(--tl-border); }
 #tl-toggle:focus-visible, #tl-density button:focus-visible, #tl-theme button:focus-visible, #tl-filter-clear:focus-visible, .tl-page-retry:focus-visible, .tl-search-collapse:focus-visible, #tl-toolbar input:focus-visible, #tl-column-picker > summary:focus-visible, .tl-action-button:focus-visible, .tl-author-avatar-link:focus-visible { outline:2px solid var(--tl-focus); outline-offset:2px; }
-.tl-poster-header, .tl-poster-cell { text-align:center; vertical-align:top; transition:width .15s ease,min-width .15s ease; }
+.tl-poster-header, .tl-poster-cell { text-align:center !important; vertical-align:middle !important; transition:width .15s ease,min-width .15s ease; }
 .tl-poster-header { color:var(--tl-primary); font-family:var(--tl-font); font-weight:700; }
 .tl-poster { display:inline-block; position:relative; z-index:1; margin:0; vertical-align:top; line-height:0; }
 .tl-poster img { object-fit:cover; border-radius:4px; background:#ddd; transition:width .15s ease,max-height .15s ease; }

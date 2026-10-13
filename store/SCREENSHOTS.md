@@ -6,7 +6,7 @@ Chrome Web Store requires at least one and allows up to five screenshots. Use **
 
 1. Use a clean Chrome window at 1280x800 CSS pixels and 100% zoom.
 2. Disable other dark-mode extensions so only RuTracker Visual Enhancer controls the page theme.
-3. Use the final 1.0.0 Store package.
+3. Use the final 1.1.0 Store package.
 4. Hide bookmarks, personal usernames, notifications, and unrelated tabs.
 5. Use neutral tracker results that do not show sensitive imagery or personally identifying information.
 
@@ -50,4 +50,4 @@ Chrome Web Store requires at least one and allows up to five screenshots. Use **
 - Do not stretch or upscale a smaller screenshot.
 - Avoid excessive text overlays. The product UI should explain itself.
 - Use square corners.
-- Verify every screenshot reflects version 1.0.0 exactly.
+- Verify every screenshot reflects version 1.1.0 exactly.

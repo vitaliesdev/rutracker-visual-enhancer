@@ -10,6 +10,7 @@
 [![Website](https://img.shields.io/badge/Website-Visit-5b3df5?style=for-the-badge&logo=githubpages&logoColor=white)](https://vitaliesdev.github.io/rutracker-visual-enhancer/)
 [![Languages](https://img.shields.io/badge/Languages-5-3d444d?style=for-the-badge&logo=googletranslate&logoColor=white)](#features)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20me-ff5e5b?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/vitalies)
+[![MIT license](https://img.shields.io/badge/License-MIT-3d444d?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](LICENSE)
 
 [Install](#install) · [Features](#features) · [Build it yourself](#build-it-yourself) · [Support](#support-the-project)
 
@@ -124,6 +125,10 @@ This extension is free and made in my spare time. If it saved you time or you si
 - **RuTracker Visual Enhancer:** REPTIX · Vitalie
 - This is an independent, unofficial extension, not affiliated with or endorsed by RuTracker. Use it in line with the site's rules and the law where you live.
 - Chrome is a trademark of Google LLC. Brave is a trademark of Brave Software, Inc.
+
+## Licence
+
+The extension's code, tools and website are under the [MIT licence](LICENSE): you can use, modify and share them, as long as the copyright notice crediting the author is kept. RuTracker and third-party content keep their own rights (see `LICENSE`).
 
 <div align="center">
 

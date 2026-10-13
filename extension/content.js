@@ -274,8 +274,17 @@
   // before we inject columns and append pages. Content scripts cannot reach the page's
   // jQuery, but jQuery handlers also fire for native events, so a plain DOM event
   // makes tablesorter rebuild its headers and cache.
+  // tablesorter counts columns from both <thead> and <tfoot>; RuTracker's footer is a
+  // single full-width cell (colspan 10), so it must follow our added columns or the
+  // last columns (Download count, Added) get no parser and stop sorting.
   function refreshTableSorter() {
-    document.querySelector("#tor-tbl")?.dispatchEvent(new Event("updateAll"));
+    const table = document.querySelector("#tor-tbl");
+    if (!table) return;
+    const columnCount = table.tHead?.rows[0]?.cells.length || 0;
+    for (const row of table.tFoot?.rows || []) {
+      if (row.cells.length === 1 && columnCount) row.cells[0].colSpan = columnCount;
+    }
+    table.dispatchEvent(new Event("updateAll"));
   }
 
   function startLazyLoading(rows, signal) {
@@ -411,7 +420,7 @@
     const headerRow = table.querySelector(":scope > thead > tr");
 
     if (headerRow && !headerRow.querySelector(":scope > .tl-poster-header")) {
-      const header = createElement("th", { className: "tl-poster-header" }, t("posterHeader"));
+      const header = createElement("th", { className: "tl-poster-header sorter-false" }, t("posterHeader"));
       headerRow.insertBefore(header, headerRow.children[titleIndex] || null);
     }
 
@@ -426,7 +435,9 @@
       const titleCell = link.closest("td");
       if (!titleCell) continue;
       titleCell.classList.add("tl-title-cell");
-      const posterCell = createElement("td", { className: `${titleCell.className} tl-poster-cell`.trim() });
+      // Keep the site's row styling but not our own title-cell layout (top-aligned).
+      const rowStyleClasses = [...titleCell.classList].filter(name => !name.startsWith("tl-")).join(" ");
+      const posterCell = createElement("td", { className: `${rowStyleClasses} tl-poster-cell`.trim() });
       row.insertBefore(posterCell, titleCell);
     }
   }
@@ -439,7 +450,7 @@
     const headerRow = table.querySelector(":scope > thead > tr");
 
     if (headerRow && !headerRow.querySelector(":scope > .tl-action-header")) {
-      const header = createElement("th", { className: "tl-action-header" }, t("actionsHeader"));
+      const header = createElement("th", { className: "tl-action-header sorter-false" }, t("actionsHeader"));
       headerRow.insertBefore(header, headerRow.children[actionIndex] || null);
     }
 

@@ -1,6 +1,6 @@
 # Privacy tab — copy/paste answers
 
-These answers describe version 1.0.0 as currently implemented. Keep the Store dashboard, public privacy policy, listing, and code consistent.
+These answers describe version 1.1.0 as currently implemented. Keep the Store dashboard, public privacy policy, listing, and code consistent.
 
 ## Single purpose
 
@@ -10,11 +10,11 @@ Enhance the readability, visual presentation, filtering, and navigation of suppo
 
 ### `storage`
 
-Stores the user's extension preferences locally, including Visual view state, theme, language, poster size, visible columns, collapsed search state, and infinite-scroll preference. It also stores a bounded, seven-day cache of topic metadata so posters and summaries do not have to be downloaded repeatedly. This data is not sent to the developer.
+Stores the user's extension preferences locally, including Visual view state, theme, language, poster size, visible columns, collapsed search state, and infinite-scroll preference. It also stores a bounded, seven-day cache of topic metadata so posters and summaries do not have to be downloaded repeatedly, and a few local counters (install date, number of Visual view searches) used only to decide when the occasional support note may appear. This data is not sent to the developer.
 
 ### `activeTab`
 
-Used only after the user clicks the pinned extension icon and presses Reload. It lets the popup reload the currently active supported tracker tab so a newly selected interface language can be applied. It is not used for background monitoring.
+Used only after the user clicks the extension icon. It lets the popup reload the active supported tracker tab so a newly selected interface language can be applied, and, together with `scripting`, check once whether the current page looks like a compatible tracker. It is not used for background monitoring.
 
 ### Host access: `rutracker.org` and subdomains
 
@@ -22,7 +22,7 @@ Required to inject the visual interface into RuTracker pages, read result rows, 
 
 ### `scripting`
 
-Used only from the extension popup, after the user clicks the extension icon on a non-RuTracker page: (1) to check whether the current page looks like a compatible tracker (a one-time read of the page structure through `activeTab`), and (2) after the user clicks **Show posters on this site** and grants access, to register the extension's own packaged content script for that single site. No remote code is injected.
+Used only from the extension popup, after the user clicks the extension icon on a non-RuTracker page: (1) to check whether the current page looks like a compatible tracker (a one-time read of the page structure through `activeTab`), and (2) after the user clicks **Show posters on …** and grants access, to register the extension's own packaged content script for that single site. No remote code is injected.
 
 ### Optional host permission: `https://*/*`
 

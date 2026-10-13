@@ -14,6 +14,7 @@ RuTracker Visual Enhancer has one purpose: improve the readability and navigatio
 6. Toggle Visual view to confirm that the original table can be restored.
 7. Test Light/Dark, S/M/L poster sizes, column visibility, the local text filter, Seeded only, and Infinite scroll.
 8. Click the extension icon, change the interface language, and use Reload. The reload button is contextual and appears only after a language change.
+9. Click a column header (for example Size) in Visual view: rows sort as on the original site, including rows added by infinite scrolling.
 
 ## Network and data behavior
 
@@ -32,4 +33,4 @@ RuTracker Visual Enhancer has one purpose: improve the readability and navigatio
 
 ## Optional per-site access
 
-On any other HTTPS page that looks like a tracker built on the same forum engine, the popup offers **Show posters on this site**. Clicking it calls `chrome.permissions.request` for that single origin; if granted, the popup registers the packaged `content.js`/`content.css` for that origin with `chrome.scripting.registerContentScripts` and reloads the tab. On those sites only posters are added. **Turn off on this site** unregisters the script and removes the permission. No host beyond RuTracker is granted at install time.
+On any other HTTPS page that looks like a tracker built on the same forum engine, the popup offers **Show posters on [site name]**. Clicking it calls `chrome.permissions.request` for that single origin; if granted, the popup registers the packaged `content.js`/`content.css` for that origin with `chrome.scripting.registerContentScripts` and reloads the tab. On those sites only posters are added. **Turn off on this site** unregisters the script and removes the permission. No host beyond RuTracker is granted at install time.

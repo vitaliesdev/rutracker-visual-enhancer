@@ -28,6 +28,7 @@ Key features:
 • Full-site Light and Dark themes
 • Original .torrent and Magnet actions
 • Localized interface in English, Ukrainian, Russian, Romanian, and Spanish
+• Also shows posters on compatible trackers you enable from the extension icon
 • No ads, analytics, accounts, remote executable code, or external API
 
 Preferences and a limited topic cache stay in the browser. The extension does not send browsing data to its developer or sell data. Topic information is requested directly from the tracker currently open in the browser.
@@ -60,6 +61,7 @@ RuTracker Visual Enhancer робить сторінки результатів �
 • Світла й темна тема для всього сайту
 • Оригінальні дії .torrent і Magnet
 • Інтерфейс англійською, українською, російською, румунською та іспанською
+• Також показує постери на сумісних трекерах, які ви ввімкнете через значок розширення
 • Без реклами, аналітики, облікових записів, віддаленого коду чи зовнішнього API
 
 Налаштування й обмежений кеш тем зберігаються лише у браузері. Розширення не надсилає історію перегляду розробнику й не продає дані.
@@ -92,6 +94,7 @@ RuTracker Visual Enhancer делает страницы результатов �
 • Светлая и тёмная тема для всего сайта
 • Исходные действия .torrent и Magnet
 • Интерфейс на английском, украинском, русском, румынском и испанском
+• Также показывает постеры на совместимых трекерах, включённых через значок расширения
 • Без рекламы, аналитики, учётных записей, удалённого кода и внешнего API
 
 Настройки и ограниченный кеш тем хранятся только в браузере. Расширение не отправляет историю просмотров разработчику и не продаёт данные.
@@ -124,6 +127,7 @@ Funcții principale:
 • Teme luminoasă și întunecată pentru întregul site
 • Acțiuni originale .torrent și Magnet
 • Interfață în engleză, ucraineană, rusă, română și spaniolă
+• Afișează postere și pe trackerele compatibile activate din pictograma extensiei
 • Fără reclame, analiză, conturi, cod executabil la distanță sau API extern
 
 Preferințele și un cache limitat al subiectelor rămân în browser. Extensia nu transmite istoricul de navigare dezvoltatorului și nu vinde date.
@@ -156,6 +160,7 @@ Funciones principales:
 • Temas claro y oscuro para toda la web
 • Acciones .torrent y Magnet originales
 • Interfaz en inglés, ucraniano, ruso, rumano y español
+• También muestra pósteres en trackers compatibles que actives desde el icono de la extensión
 • Sin anuncios, analítica, cuentas, código remoto ejecutable ni API externa
 
 Las preferencias y una caché limitada de temas permanecen en el navegador. La extensión no envía el historial de navegación al desarrollador ni vende datos. La información se solicita directamente al tracker abierto en el navegador.

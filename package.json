@@ -3,6 +3,8 @@
   "version": "1.1.0",
   "private": true,
   "description": "Chrome/Brave extension that adds posters, filters, infinite scrolling and Light/Dark themes to RuTracker result pages.",
+  "license": "MIT",
+  "author": "REPTIX",
   "type": "module",
   "scripts": {
     "lint": "eslint extension scripts",
