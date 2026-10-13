@@ -128,7 +128,9 @@ This extension is free and made in my spare time. If it saved you time or you si
 
 ## Licence
 
-The extension's code, tools and website are under the [MIT licence](LICENSE): you can use, modify and share them, as long as the copyright notice crediting the author is kept. RuTracker and third-party content keep their own rights (see `LICENSE`).
+The extension's code, tools, website and artwork are under the [MIT licence](LICENSE): you can use, modify and share them, as long as the copyright notice crediting the author is kept.
+
+The licence does not cover RuTracker, its name and its content, which belong to their owners; the third-party content visible in the screenshots; or the Chrome and Brave trademarks.
 
 <div align="center">
 
